@@ -1,10 +1,15 @@
-import models.FruitType
-import models.FruitType.FruitType
+import models.{ADT, FruitType, GenericCaseClass, SimpleCaseClass}
 
 object Main extends App {
 
-  val apple = Apple("Gala", FruitType.APPLE)
-  println(apple)
 }
 
-case class Apple(name: String, kind: FruitType)
+case class EnumTest(a: String, b: FruitType.FruitType)
+
+case class SimpleCaseClassTest(a: String, b: SimpleCaseClass)
+
+case class GenericCaseClassTest1(a: String, b: GenericCaseClass[String])
+
+case class GenericCaseClassTest2[T](a: String, b: GenericCaseClass[T])
+
+case class ADTTest(a: String, b: ADT)

@@ -7,3 +7,6 @@ lazy val commons = (project in file("commons"))
 lazy val api = (project in file("api"))
   .dependsOn(commons)
   .enablePlugins(ScalatsGeneratorPlugin)
+  .settings(
+    scalatsTypeExcludes := Set("Main")
+  )

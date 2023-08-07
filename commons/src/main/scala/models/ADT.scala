@@ -1,6 +1,6 @@
 package models
 
-trait ADT {
+sealed trait ADT {
   def param: String
 }
 
